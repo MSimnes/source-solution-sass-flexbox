@@ -1,0 +1,197 @@
+/* Box Model Hack */
+* {
+    box-sizing: border-box;
+  }
+/* HTML font-size set. Use only rem */
+html {
+    font-size: 62.5%;
+}  
+  /* Clear fix hack */
+  .clearfix:after {
+       content: ".";
+       display: block;
+       clear: both;
+       visibility: hidden;
+       line-height: 0;
+       height: 0;
+  }
+  
+  .clear {
+      clear: both;
+  }
+
+/*   Color Variables   */
+$base-color: rgb(20, 22, 88);
+$base-light: rgb(102,119,133);
+$base-dark: rgb(48,70,89);
+$backgroundColor: rgb(245,249,252);
+$inputColor: rgb(225,233,240);
+$computerColor: rgb(225,233,240);
+$fontDark: rgb(47,69,89);
+header {
+    width: 100%;
+    display: inline-flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    
+    span{
+        color: $base-dark;
+        font-size: 2.5rem;
+        margin-right: auto;
+        margin-left: 1rem;
+    }
+    ul a {
+        text-decoration: none;
+        color: $base-light;
+        padding: .3rem 1.8rem;
+    }
+    
+    
+    li {
+        list-style-type: none;
+        display: inline;
+    }
+    .divButton{
+        margin-left: auto;
+        margin-right: 2rem;;
+    }
+   
+    
+}
+.divButton {
+    background-color: $base-dark;
+    padding: 5px 10px;
+    align-self: center;
+    a {
+        color: whitesmoke;
+        text-decoration: none;
+    }
+}
+body {
+    background-color: $backgroundColor;
+}
+
+/* Grid layouts  */
+
+.heroContainer {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 50% 50%;
+}
+
+.heroContainer_left {
+    width: 60%;
+    text-align: left;
+    margin-left: 5rem;
+    h1 {
+        font-size: 3rem;
+        color: $fontDark
+    }
+    input {
+        display: inline-flex;
+        padding: .4rem .8rem;
+        border: none;
+        background-color: $inputColor;
+    }
+    .divButton {
+        display: inline-flex;
+        padding: .6rem 1.1rem;
+    }
+    span {
+        font-size: 1rem;
+        color: $fontDark;
+        display: block;
+        margin-top: 4rem;
+        margin-bottom: auto;
+    }
+    
+}
+.heroContainer_right {
+    background-color: white;
+    border-top: 2rem solid $computerColor;
+    border-left: 1rem solid $computerColor;
+    border-bottom: 2rem solid $computerColor;
+    border-top-left-radius: .8rem;
+    margin-top: 3rem;;
+}
+.featureSection{
+    display: grid;
+    grid-template-columns: 17% 17% 17% 17%;
+    margin-top: 5rem;;
+    margin-left: 5rem;
+    margin-bottom: 3rem;
+    gap: 3rem;
+    h3 {
+        color: $base-dark;
+        font-size: 1.2rem;
+    }
+    p {
+        color: $base-light;
+        font-size: 1rem;
+    }
+    a {
+        font-size: 1.2rem;
+        text-decoration: none;
+        color: $fontDark;
+    }
+}
+.container_2 {
+    background-color: white;
+    height: 30rem;
+    .container_2_right {
+        margin-left: 5rem;
+        padding-top: 2rem;
+        width: 50%;
+        h1 {
+            font-size: 2.8rem;
+            color: $fontDark;
+        }
+        p {
+            font-size: 1.2rem;
+            color: $base-light;
+        }
+}
+}
+/* Responsive Layout   */
+
+@media screen and (max-width: 600px){
+    header {
+        border-bottom: .1rem solid $base-light;
+        .title {
+            width: 100%;
+            text-align: center;
+    }
+        nav {
+            display: none;
+    }
+        div {
+            display: none;
+            
+    }
+        
+}   .heroContainer {
+    display: block;
+}
+    .heroContainer_left{
+        width: 100%;
+            input {
+                width: 100%;
+                margin: auto;
+            }
+           div {
+                width: 100%;
+                margin: auto;
+                margin-top: 1rem;
+
+            }
+            p {
+                width: 100%;
+                margin: auto;
+            }
+    }
+    .heroContainer_right {
+        margin-top: 3rem;
+        margin-left: 2rem;
+        height: 20rem;
+    }
+}

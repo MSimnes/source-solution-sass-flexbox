@@ -1,0 +1,188 @@
+/* Box Model Hack */
+* {
+  box-sizing: border-box;
+}
+
+/* HTML font-size set. Use only rem */
+html {
+  font-size: 62.5%;
+}
+
+/* Clear fix hack */
+.clearfix:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+
+.clear {
+  clear: both;
+}
+
+/*   Color Variables   */
+header {
+  width: 100%;
+  display: inline-flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+}
+header span {
+  color: rgb(48, 70, 89);
+  font-size: 2.5rem;
+  margin-right: auto;
+  margin-left: 1rem;
+}
+header ul a {
+  text-decoration: none;
+  color: rgb(102, 119, 133);
+  padding: 0.3rem 1.8rem;
+}
+header li {
+  list-style-type: none;
+  display: inline;
+}
+header .divButton {
+  margin-left: auto;
+  margin-right: 2rem;
+}
+
+.divButton {
+  background-color: rgb(48, 70, 89);
+  padding: 5px 10px;
+  align-self: center;
+}
+.divButton a {
+  color: whitesmoke;
+  text-decoration: none;
+}
+
+body {
+  background-color: rgb(245, 249, 252);
+}
+
+/* Grid layouts  */
+.heroContainer {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 50% 50%;
+}
+
+.heroContainer_left {
+  width: 60%;
+  text-align: left;
+  margin-left: 5rem;
+}
+.heroContainer_left h1 {
+  font-size: 3rem;
+  color: rgb(47, 69, 89);
+}
+.heroContainer_left input {
+  display: inline-flex;
+  padding: 0.4rem 0.8rem;
+  border: none;
+  background-color: rgb(225, 233, 240);
+}
+.heroContainer_left .divButton {
+  display: inline-flex;
+  padding: 0.6rem 1.1rem;
+}
+.heroContainer_left span {
+  font-size: 1rem;
+  color: rgb(47, 69, 89);
+  display: block;
+  margin-top: 4rem;
+  margin-bottom: auto;
+}
+
+.heroContainer_right {
+  background-color: white;
+  border-top: 2rem solid rgb(225, 233, 240);
+  border-left: 1rem solid rgb(225, 233, 240);
+  border-bottom: 2rem solid rgb(225, 233, 240);
+  border-top-left-radius: 0.8rem;
+  margin-top: 3rem;
+}
+
+.featureSection {
+  display: grid;
+  grid-template-columns: 17% 17% 17% 17%;
+  margin-top: 5rem;
+  margin-left: 5rem;
+  margin-bottom: 3rem;
+  gap: 3rem;
+}
+.featureSection h3 {
+  color: rgb(48, 70, 89);
+  font-size: 1.2rem;
+}
+.featureSection p {
+  color: rgb(102, 119, 133);
+  font-size: 1rem;
+}
+.featureSection a {
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: rgb(47, 69, 89);
+}
+
+.container_2 {
+  background-color: white;
+  height: 30rem;
+}
+.container_2 .container_2_right {
+  margin-left: 5rem;
+  padding-top: 2rem;
+  width: 50%;
+}
+.container_2 .container_2_right h1 {
+  font-size: 2.8rem;
+  color: rgb(47, 69, 89);
+}
+.container_2 .container_2_right p {
+  font-size: 1.2rem;
+  color: rgb(102, 119, 133);
+}
+
+/* Responsive Layout   */
+@media screen and (max-width: 600px) {
+  header {
+    border-bottom: 0.1rem solid rgb(102, 119, 133);
+  }
+  header .title {
+    width: 100%;
+    text-align: center;
+  }
+  header nav {
+    display: none;
+  }
+  header div {
+    display: none;
+  }
+  .heroContainer {
+    display: block;
+  }
+  .heroContainer_left {
+    width: 100%;
+  }
+  .heroContainer_left input {
+    width: 100%;
+    margin: auto;
+  }
+  .heroContainer_left div {
+    width: 100%;
+    margin: auto;
+    margin-top: 1rem;
+  }
+  .heroContainer_left p {
+    width: 100%;
+    margin: auto;
+  }
+  .heroContainer_right {
+    margin-top: 3rem;
+    margin-left: 2rem;
+    height: 20rem;
+  }
+}/*# sourceMappingURL=main.css.map */
